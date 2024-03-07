@@ -21,6 +21,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,
         onPressed: () {},
+        shape: StadiumBorder(
+            side: BorderSide(width: 4, color: Colors.transparent)),
         child: Icon(
           Icons.monetization_on,
           color: Colors.white,
@@ -34,20 +36,27 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Icon(
-              Icons.home,
-              color: Colors.pink,
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.home,
+                color: Colors.pink,
+              ),
             ),
-            Icon(
-              Icons.settings,
-              color: Colors.grey,
-            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.settings,
+                color: Colors.grey,
+              ),
+            )
           ],
         ),
       ),
       body: SafeArea(
           child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
+        padding: EdgeInsets.only(bottom: kBottomNavigationBarHeight),
         child: Column(
           children: [
             Padding(
@@ -80,7 +89,7 @@ class _HomePageState extends State<HomePage> {
             ),
             //Cards
             SizedBox(
-              height: 170,
+              height: 200,
               child: PageView(
                 controller: _controller,
                 children: [

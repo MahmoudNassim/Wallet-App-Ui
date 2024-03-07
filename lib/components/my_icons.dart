@@ -13,7 +13,7 @@ class MyIcons extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-              boxShadow: [BoxShadow(color: Colors.white, blurRadius: 20)],
+              boxShadow: const [BoxShadow(color: Colors.white, blurRadius: 20)],
               borderRadius: BorderRadius.circular(16)),
           height: 100,
           child: Center(
